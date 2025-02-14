@@ -43,4 +43,12 @@ def jogo():
     else:
         print(f"Errou! A capital correta de {estado} é {dicionario_estados[estado]}.")
 
-jogo()
+def jogarNovamente():
+    while True:
+        jogo()
+        repetir = input('Mais uma rodada? (S-Sim ou N-Não): ').strip().lower()
+        
+        if repetir != 's':
+            break
+
+jogarNovamente()
